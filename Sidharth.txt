@@ -1,0 +1,163 @@
+package start;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.Scanner;
+
+public class EmployeesManager {
+
+  /**
+   * Implement EmployeesManager to manage all employees of a company
+   *
+   */
+
+  /**
+   * Adds an Employee
+   *
+   * @param employee
+   * @return
+   */
+  Employee addEmployee(Employee employee) {
+    // TODO - implement this
+
+     System.out.println( "Enter the information of the Employee");
+     System.out.println("Enter the age of the employee");
+     Scanner sc= new Scanner(System.in);
+     int  ageInYears=sc.nextInt();
+     
+     
+     System.out.println("Enter the birthdate of the employee");
+     Scanner sc1= new Scanner(System.in);
+     String birthDate=sc.nextLine();
+    
+     System.out.println("Enter the first name of the employee");
+     Scanner sc2= new Scanner(System.in);
+     String firstName=sc.nextLine();
+     
+     System.out.println("Enter the last name of the employee");
+     Scanner sc3= new Scanner(System.in);
+     String lastName=sc.nextLine();
+     
+     System.out.println("Enter the employee id of the employee");
+     Scanner sc4= new Scanner(System.in);
+     int employeeId =sc.nextInt();
+
+    return employee;
+  }
+
+  /**
+   * Finds an Employee
+   *
+   * @param employeeId
+   * @return
+   */
+  Employee findEmployee1(int employeeId) {
+    // TODO - implement this
+	 for(int i=0;i<Employee.length();i++)
+	 {     // If the data is found
+	        if (Employee[i].employeeId == employeeId) {
+	           System.out.println("Employee found");
+	           System.out.println(Employee.firstName);
+	           System.out.println(Employee.lastName);
+	           System.out.println(Employee.EmployeeId);
+	           System.out.println(Employee. birthDate);
+	           System.out.println(Employee.ageInMonths);
+	           System.out.println(Employee.ageInYears);
+	        }
+	    }
+	  
+  }
+
+  /**
+   * Find all Employee who are older than X years
+   * @param years
+   * @return
+   */
+  Collection<Employee> findEmployee(int years) {
+	  for(int i=0;i<Employee.length();i++)
+		 {     // If the data is found
+		        if (Employee[i].employeeId == employeeId) {
+		           System.out.println("Employee found");
+		           System.out.println(Employee.firstName);
+		           System.out.println(Employee.lastName);
+		           System.out.println(Employee.EmployeeId);
+		           System.out.println(Employee. birthDate);
+		           System.out.println(Employee.ageInMonths);
+		           System.out.println(Employee.ageInYears);
+		        }
+		    }
+	  return Collection<Employee>;
+  }
+
+  /**
+   * Removes an employee
+   *
+   * @param employeeId
+   * @return
+   */
+  boolean removeEmployee(String employeeId) {
+    // TODO - implement this
+	  for (int j = i; j < Employeee.lenght(); j++) {
+		    if (Employee[j].employeeId == employeeId) {
+		    Employee[j].remove(Id);
+		    return true;
+		    }
+		    }
+	    }
+	    return false;
+  }
+
+  /**
+   * Lists all Employees
+   *
+   * @return
+   */
+  Collection<Employee> list Employees() {
+    // TODO - implement this
+    
+	  
+	  Iterator<E> itr = list.iterator();
+	  while(itr.hasNext())
+	  {
+		  System.out.println(itr.next());
+	  
+  }
+}
+
+class Employee {
+
+  private int ageInYears;
+  private int ageInMonths;
+  private String birthDate;
+  private String firstName;
+  private String lastName;
+
+  private String employeeId;
+
+  public Employee(String fullName, String birthDate) {
+    // TODO - implement this
+  }
+
+  public int getAgeInYears() {
+    return ageInYears;
+  }
+
+  public int getAgeInMonths() {
+    return ageInMonths;
+  }
+
+  public String getFirstName() {
+    return firstName;
+  }
+
+  public String getLastName() {
+    return lastName;
+  }
+
+  public String getEmployeeId() {
+    return employeeId;
+  }
+
+  public String getBirthDate() {
+    return birthDate;
+  }
+}
